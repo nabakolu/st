@@ -6,7 +6,7 @@
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
 static char *font = "Liberation Mono:pixelsize=12:antialias=true:autohint=true";
-static int borderpx = 2;
+static int borderpx = 0;
 
 /*
  * What program is execed by st depends of these precedence rules:
@@ -19,7 +19,7 @@ static int borderpx = 2;
 static char *shell = "/bin/sh";
 char *utmp = NULL;
 /* scroll program: to enable use a string like "scroll" */
-char *scroll = /usr/local/bin/scroll;
+char *scroll = "/usr/local/bin/scroll";
 char *stty_args = "stty raw pass8 nl -echo -iexten -cstopb 38400";
 
 /* identification sequence returned in DA and DECID */
@@ -189,19 +189,19 @@ ResourcePref resources[] = {
 		{ "color13",      STRING,  &colorname[13] },
 		{ "color14",      STRING,  &colorname[14] },
 		{ "color15",      STRING,  &colorname[15] },
-		{ "background",   STRING,  &colorname[256] },
-		{ "foreground",   STRING,  &colorname[257] },
-		{ "cursorColor",  STRING,  &colorname[258] },
-		{ "termname",     STRING,  &termname },
-		{ "shell",        STRING,  &shell },
-		{ "minlatency",   INTEGER, &minlatency },
-		{ "maxlatency",   INTEGER, &maxlatency },
-		{ "blinktimeout", INTEGER, &blinktimeout },
-		{ "bellvolume",   INTEGER, &bellvolume },
-		{ "tabspaces",    INTEGER, &tabspaces },
-		{ "borderpx",     INTEGER, &borderpx },
-		{ "cwscale",      FLOAT,   &cwscale },
-		{ "chscale",      FLOAT,   &chscale },
+		//{ "background",   STRING,  &colorname[256] },
+		//{ "foreground",   STRING,  &colorname[257] },
+		//{ "cursorColor",  STRING,  &colorname[1] },
+		//{ "termname",     STRING,  &termname },
+		//{ "shell",        STRING,  &shell },
+		//{ "minlatency",   INTEGER, &minlatency },
+		//{ "maxlatency",   INTEGER, &maxlatency },
+		//{ "blinktimeout", INTEGER, &blinktimeout },
+		//{ "bellvolume",   INTEGER, &bellvolume },
+		//{ "tabspaces",    INTEGER, &tabspaces },
+		//{ "borderpx",     INTEGER, &borderpx },
+		//{ "cwscale",      FLOAT,   &cwscale },
+		//{ "chscale",      FLOAT,   &chscale },
 };
 
 /*

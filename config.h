@@ -251,6 +251,8 @@ static Shortcut shortcuts[] = {
 	{ TERMMOD,              XK_I, externalpipe, {.v = copyoutput } },
 	{ TERMMOD,				XK_Page_Up,			kscrollup,	{.i = -1} },
 	{ TERMMOD,				XK_Page_Down,		kscrolldown,	{.i = -1} },
+	{ TERMMOD,				XK_K,			kscrollup,	{.i = -1} },
+	{ TERMMOD,				XK_J,		kscrolldown,	{.i = -1} },
 };
 
 /*

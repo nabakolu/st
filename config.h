@@ -18,7 +18,7 @@ static int borderpx = 0;
 static char *shell = "/bin/sh";
 char *utmp = NULL;
 /* scroll program: to enable use a string like "scroll" */
-char *scroll = "/usr/local/bin/scroll";
+char *scroll = NULL;
 char *stty_args = "stty raw pass8 nl -echo -iexten -cstopb 38400";
 
 /* identification sequence returned in DA and DECID */
@@ -210,10 +210,12 @@ ResourcePref resources[] = {
 static MouseShortcut mshortcuts[] = {
 	/* mask                 button   function        argument       release */
 	{ XK_ANY_MOD,           Button2, selpaste,       {.i = 0},      1 },
-	{ ShiftMask,            Button4, ttysend,        {.s = "\033[5;2~"} },
-	{ XK_ANY_MOD,           Button4, ttysend,        {.s = "\031"} },
-	{ ShiftMask,            Button5, ttysend,        {.s = "\033[6;2~"} },
-	{ XK_ANY_MOD,           Button5, ttysend,        {.s = "\005"} },
+	//{ ShiftMask,            Button4, ttysend,        {.s = "\033[5;2~"} },
+	//{ XK_ANY_MOD,           Button4, ttysend,        {.s = "\031"} },
+	//{ ShiftMask,            Button5, ttysend,        {.s = "\033[6;2~"} },
+	//{ XK_ANY_MOD,           Button5, ttysend,        {.s = "\005"} },
+	{ XK_ANY_MOD,            Button4, kscrollup,      {.i = 3} },
+	{ XK_ANY_MOD,            Button5, kscrolldown,    {.i = 3} },
 };
 
 /* Internal keyboard shortcuts. */
@@ -247,6 +249,8 @@ static Shortcut shortcuts[] = {
 	{ TERMMOD,              XK_U, externalpipe, {.v = copyurlcmd } },
 	{ TERMMOD,              XK_O, externalpipe, {.v = openurlcmd } },
 	{ TERMMOD,              XK_I, externalpipe, {.v = copyoutput } },
+	{ TERMMOD,				XK_Page_Up,			kscrollup,	{.i = -1} },
+	{ TERMMOD,				XK_Page_Down,		kscrolldown,	{.i = -1} },
 };
 
 /*

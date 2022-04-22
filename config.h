@@ -6,7 +6,7 @@
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
 //static char *font = "RobotoMono Nerd Font:pixelsize=16:antialias=true:autohint=true";
-static char *font = "ComicMono Nerd Font:pixelsize=16:antialias=true:autohint=true";
+static char *font = "nabakolu:pixelsize=16:antialias=true:autohint=true";
 static char *font2[] = {"Blobmoji"};
 
 static int borderpx = 0;

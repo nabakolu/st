@@ -154,6 +154,9 @@ static unsigned int defaultrcs = 257;
  * 7: Snowman ("☃")
  */
 static unsigned int cursorshape = 0;
+static unsigned int cursorstyle = 0;
+
+static Rune stcursor = 0x2603; /* snowman ("☃") */
 
 /*
  * Default columns and rows numbers

@@ -2118,7 +2118,7 @@ xrdb_load(void)
 
 		XRESOURCE_LOAD_STRING("foreground", colorname[defaultfg]);
 		XRESOURCE_LOAD_STRING("background", colorname[defaultbg]);
-		XRESOURCE_LOAD_STRING("cursorColor", colorname[defaultcs])
+		XRESOURCE_LOAD_STRING("URxvt*cursorColor", colorname[defaultcs])
 		else {
 		  // this looks confusing because we are chaining off of the if
 		  // in the macro. probably we should be wrapping everything blocks

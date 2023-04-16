@@ -68,6 +68,7 @@ static unsigned int blinktimeout = 800;
 static unsigned int cursorthickness = 2;
 
 /*
+<<<<<<< HEAD
  * 1: render most of the lines/blocks characters without using the font for
  *    perfect alignment between cells (U2500 - U259F except dashes/diagonals).
  *    Bold affects lines thickness if boxdraw_bold is not 0. Italic is ignored.
@@ -80,6 +81,8 @@ const int boxdraw_bold = 1;
 const int boxdraw_braille = 1;
 
 /*
+=======
+>>>>>>> patch/undercurl
  * bell volume. It must be a value between -100 and 100. Use 0 for disabling
  * it
  */
@@ -200,7 +203,6 @@ static MouseShortcut mshortcuts[] = {
 #define MODKEY Mod1Mask
 #define TERMMOD (ControlMask|ShiftMask)
 
-
 static char *copyurlcmd[] = { "/bin/sh", "-c",
 			      "sed 's/.*│//g' | tr -d '\n' | grep -aEo '(((http|https)://|www\\.)[a-zA-Z0-9.]*[:]?[a-zA-Z0-9./&%?$#=_-]*)|((magnet:\\?xt=urn:btih:)[a-zA-Z0-9]*)' | uniq | sed 's/^www./http:\\/\\/www\\./g' | dmenu -i -p 'Copy which url?' -l 10 | tr -d '\n' | xclip -selection clipboard",
 			      "externalpipe", NULL };
@@ -233,7 +235,6 @@ static Shortcut shortcuts[] = {
 	{ TERMMOD,				XK_K,			kscrollup,	{.i = -1} },
 	{ TERMMOD,				XK_J,		kscrolldown,	{.i = -1} },
 };
-
 
 /*
  * Special keys (change & recompile st.info accordingly)

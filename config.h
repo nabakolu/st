@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "nabakolu:pixelsize=12:antialias=true:autohint=true";
+static char *font = "Roboto Mono Nerd Font:pixelsize=12:antialias=true:autohint=true";
 static int borderpx = 0;
 
 /*

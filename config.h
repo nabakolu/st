@@ -68,7 +68,6 @@ static unsigned int blinktimeout = 800;
 static unsigned int cursorthickness = 2;
 
 /*
-<<<<<<< HEAD
  * 1: render most of the lines/blocks characters without using the font for
  *    perfect alignment between cells (U2500 - U259F except dashes/diagonals).
  *    Bold affects lines thickness if boxdraw_bold is not 0. Italic is ignored.
@@ -81,8 +80,6 @@ const int boxdraw_bold = 1;
 const int boxdraw_braille = 1;
 
 /*
-=======
->>>>>>> patch/undercurl
  * bell volume. It must be a value between -100 and 100. Use 0 for disabling
  * it
  */
@@ -107,6 +104,8 @@ char *termname = "st-256color";
  *	stty tabs
  */
 unsigned int tabspaces = 4;
+/* bg opacity */
+float alpha = 0.9;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
